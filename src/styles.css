@@ -1,0 +1,14 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  width: 100% !important;
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 40px auto;
+}

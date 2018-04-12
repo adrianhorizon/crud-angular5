@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <mat-input-container>
+    <input matInput placeholder="Titulo" name="title" ngModel>
+  </mat-input-container>
+  <mat-input-container>
+    <input matInput placeholder="Descripcion" name="description" ngModel>
+  </mat-input-container>
+  <mat-grid-list cols="3" rowHeight="3:2">
+    <!-- creamos un for para repite n eventos y asignanos la variable icon con let -->
+    <mat-grid-tile *ngFor="let icon of icons">
+      <!-- declaramos en la clase devicon llamando del icons.ts su nombre del icono -->
+      <!-- e invocamos del metodo get los iconos com etiqueta sino por defult busca el primer icono -->
+      <mat-radio-group [ngModel] name="icon">
+      <mat-radio-button value="devicon-{{ icon.name }}-{{ getIconVersion(icon) }}">
+        <i mat-list-icon class="devicon-{{ icon.name }}-{{ getIconVersion(icon) }} colored"></i>
+      </mat-radio-button>
+    </mat-radio-group>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <button type="submit" mat-raised-button color="accent">Enviar</button>
+</form>

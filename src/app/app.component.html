@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+    <!-- vamos a definir la ruta principal mediante un array de rounting.ts el de APP_ROUTES -->
+    <span [routerLink]="['/']" class="space">Wiissy lite</span>
+    <mat-icon [routerLink]="['signin']">account_circle</mat-icon>
+</mat-toolbar>
+  <!-- definir desde el module routing la ruta a definir -->
+  <router-outlet></router-outlet>
